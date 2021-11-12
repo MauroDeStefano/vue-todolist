@@ -25,33 +25,38 @@ const app = new Vue({
 
   data: {
     todoList:[
-      "studiare",
-      "studiare",
-      "studiare",
-      "studiare"
+      {
+        phrase: "studiare",
+        cutted: false 
+      },
+      {
+        phrase: "studiare",
+        cutted: false 
+      },
+      {
+        phrase: "studiare",
+        cutted: false 
+      },
+      {
+        phrase: "studiare",
+        cutted: false 
+      },
+      {
+        phrase: "studiare",
+        cutted: false 
+      },
+      {
+        phrase: "studiare",
+        cutted: false 
+      },
     ],
 
     error: false,
 
     stringToDo: "",
-  },
-
-  methods:{
-
-    pushToDo(){
-      if(this.stringToDo.length < 3){
-        this.error = true;
-
-      }else{
-        this.todoList.push(this.stringToDo);
-        this.stringToDo = "";
-        this.error= false;
-      }
     },
 
-    removeToDo(index){
-      this.todoList.splice(index, 1);
-    }
-  }
 
 });
+  
+
