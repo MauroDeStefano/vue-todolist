@@ -14,7 +14,13 @@
   <div id="app" class="container d-flex flex-column justify-content-center p-5">
 
     <h1 class="text-center">Cose da Fare</h1>
-
+    <h5 class="text-center" v-if="error">Inserisci almeno 3 lettere</h5>
+    <input class="mds-text-input"
+    type="text"
+    placeholder="Aggiungi una cosa da fare"
+    @keyup.enter="pushToDo"
+    v-model="stringToDo.phrase">
+    <button class="btn btn-secondary" @click="pushToDo">Appuntalo</button>
 
     <ul>
 
@@ -35,6 +41,8 @@
   </div>
   
   <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-  <script src="js/script.js"></script>
+  <!-- <script src="js/milestone1.js"></script> -->
+  <!-- <script src="js/milestone2.js"></script> -->
+  <script src="js/milestone3.js"></script>
 </body>
 </html>
