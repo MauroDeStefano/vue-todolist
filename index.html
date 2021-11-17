@@ -19,7 +19,7 @@
     type="text"
     placeholder="Aggiungi una cosa da fare"
     @keyup.enter="pushToDo"
-    v-model="stringToDo.phrase">
+    v-model.trim="stringToDo.phrase">
     <button class="btn btn-secondary" @click="pushToDo">Appuntalo</button>
 
     <ul>
